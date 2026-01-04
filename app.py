@@ -25,15 +25,15 @@ UUID = os.environ.get('UUID', '3ab89b98-e93d-11f0-8000-637f3d928cb3')  # UUID,�
 NEZHA_SERVER = os.environ.get('NEZHA_SERVER', '')      # 哪吒面板域名或ip, v1格式: nezha.xxx.com:8008, v0格式: nezha.xxx.com
 NEZHA_PORT = os.environ.get('NEZHA_PORT', '')          # v1哪吒请留空, v0哪吒的agent通信端口,自动匹配tls
 NEZHA_KEY = os.environ.get('NEZHA_KEY', '')            # v1哪吒的NZ_CLIENT_SECRET或v0哪吒agent密钥
-ARGO_DOMAIN = os.environ.get('ARGO_DOMAIN', 'ctrlluneshost.yycsl.pp.ua')        # Argo固定隧道域名,留空即使用临时隧道
-ARGO_AUTH = os.environ.get('ARGO_AUTH', 'eyJhIjoiNDdjMjZiNDI0ZTIwM2MwN2NmYjYzNDAxNThmZmVlNzMiLCJ0IjoiMGMxMzEwZGQtMWY4Zi00MTkyLWJlOWUtNzUyMDk3ZThiOTFhIiwicyI6Ik9EQmlZMlUyTXpjdFpEZG1aQzAwWXpnekxUazJNalF0TTJVME1UZGpPREJqTnpSbSJ9')            # Argo固定隧道密钥,留空即使用临时隧道
-ARGO_PORT = int(os.environ.get('ARGO_PORT', '3171'))   # Argo端口,使用固定隧道token需在cloudflare后台设置端口和这里一致
+ARGO_DOMAIN = os.environ.get('ARGO_DOMAIN', '')        # Argo固定隧道域名,留空即使用临时隧道
+ARGO_AUTH = os.environ.get('ARGO_AUTH', '')            # Argo固定隧道密钥,留空即使用临时隧道
+ARGO_PORT = int(os.environ.get('ARGO_PORT', '8001'))   # Argo端口,使用固定隧道token需在cloudflare后台设置端口和这里一致
 CFIP = os.environ.get('CFIP', 'cdns.doon.eu.org')             # 优选ip或优选域名
 CFPORT = int(os.environ.get('CFPORT', '443'))          # 优选ip或优选域名对应端口
 NAME = os.environ.get('NAME', 'ctrlluneshost')                      # 节点名称
 CHAT_ID = os.environ.get('CHAT_ID', '')                # Telegram chat_id,推送节点到tg,两个变量同时填写才会推送
 BOT_TOKEN = os.environ.get('BOT_TOKEN', '')            # Telegram bot_token
-PORT = int(os.environ.get('SERVER_PORT') or os.environ.get('PORT') or 3171) # 订阅端口，如无法订阅，请手动修改为分配的端口
+PORT = int(os.environ.get('SERVER_PORT') or os.environ.get('PORT') or 3000) # 订阅端口，如无法订阅，请手动修改为分配的端口
 
 # Create running folder
 def create_directory():
